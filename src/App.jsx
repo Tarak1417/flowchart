@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className="outer-container">
-      <div className="header">Cloud Architecture Flowchart</div>
+     
 
       <div className="flow-container">
         <ReactFlow
