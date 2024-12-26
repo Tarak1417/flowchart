@@ -34,14 +34,29 @@ function App() {
           x: Math.random() * window.innerWidth,
           y: Math.random() * window.innerHeight,
         },
-        style:
-          type === "input"
-            ? { backgroundColor: "bg-green-300" }
-            : type === "output"
-            ? { backgroundColor: "bg-yellow-300" }
-            : type === "default"
-            ? { backgroundColor: "bg-blue-300" }
-            : {},
+        style: 
+        type === "green"
+          ? { backgroundColor: "green" }
+          : type === "blue"
+          ? { backgroundColor: "blue" }
+          : type === "yellow"
+          ? { backgroundColor: "yellow" }
+          : type === "red"
+          ? { backgroundColor: "red" }
+          : type === "orange"
+          ? { backgroundColor: "orange" }
+          : type === "purple"
+          ? { backgroundColor: "purple" }
+          : type === "pink"
+          ? { backgroundColor: "pink" }
+          : type === "brown"
+          ? { backgroundColor: "brown" }
+          : type === "black"
+          ? { backgroundColor: "black" }
+          : type === "white"
+          ? { backgroundColor: "white" }
+          : { backgroundColor: "defaultColor" }
+      
       })
     );
   };
@@ -104,7 +119,7 @@ function App() {
               type="text"
               name="nodeType"
               id="component-type"
-              placeholder="input / output / default"
+              placeholder="color name"
               onChange={(e) => {
                 setType(e.target.value);
               }}
@@ -114,7 +129,8 @@ function App() {
           <button
             type="button"
             onClick={addNote}
-            className="bg-purple-500 hover:bg-violet-600 text-white font-mono py-2 px-4 rounded mx-1"
+            className="bg-purple hover:bg-violet text-white font-mono py-2 px-4 rounded mx-1 shadow-lg"
+
           >
             Add Component
           </button>
